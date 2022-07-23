@@ -7,10 +7,10 @@ RUN yum update -y
 RUN yum install -y httpd \
  zip \
  unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page270/veggie.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page274/branding.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip veggie.zip
-RUN cp -rvf veggie-master/* .
-RUN rm -rf veggie-master veggie.zip
+RUN unzip branding.zip
+RUN cp -rvf branding/* .
+RUN rm -rf branding branding.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
