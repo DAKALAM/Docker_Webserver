@@ -7,10 +7,10 @@ RUN yum update -y
 RUN yum install -y httpd \
  zip \
  unzip
-ADD https:https://www.free-css.com/assets/files/free-css-templates/download/page275/the7.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page273/speed.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip the7.zip
-RUN cp -rvf the7/* .
-RUN rm -rf the7 the7.zip
+RUN unzip speed.zip
+RUN cp -rvf speed/* .
+RUN rm -rf speed speed.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
